@@ -1,14 +1,18 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Link } from "react-router-dom";
+import { ShoppingBag } from "lucide-react";
 
-const Index = () => {
+const Dashboard = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
+    <Link to="/login" className="flex min-h-screen items-center justify-center bg-background">
       <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+        <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-purple">
+          <ShoppingBag size={32} className="text-primary-foreground" />
+        </div>
+        <h1 className="mb-2 text-3xl font-bold text-foreground">Shopee Chat Manager</h1>
+        <p className="text-muted-foreground">クリックしてログイン画面へ</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
-export default Index;
+export default Dashboard;
